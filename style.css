@@ -1,56 +1,64 @@
-/* Reset */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Page background */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: hsl(47, 88%, 63%); /* yellow */
+  background-color: hsl(47, 88%, 63%); 
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
-/* Card container */
 .Blog-page {
   background: white;
   border-radius: 15px;
-  padding: 20px;
+  padding: 30px;
   width: 350px;
   box-shadow: 7px 7px 0px black;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.Blog-page:hover {
+  transform: scale(1.05);
+  box-shadow: 14px 14px 20px black;
+  transition: transform 0.1 ease, box-shadow 0.1s ease;
 }
 
-/* Top image */
+
 .Blog-image {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 20px;
 }
 
-/* Tag */
+
 .tag {
   background-color: hsl(47, 88%, 63%);
   color: black;
   font-weight: bold;
   padding: 5px 10px;
   border-radius: 5px;
-  font-size: 0.85rem;
-  display: inline-block;
+  font-size: 14px;
+  display: inline-flex;
   margin-bottom: 15px;
 }
+.tag:hover {
+  background-color: black;
+  color:white;
+  cursor: pointer;
+}
 
-/* Date */
+
 .date {
   font-size: 0.9rem;
   color: hsl(0, 0%, 30%);
   margin-bottom: 12px;
 }
 
-/* Title */
 .title {
   font-size: 1.3rem;
   font-weight: 800;
@@ -62,7 +70,7 @@ body {
   cursor: pointer;
 }
 
-/* Description */
+
 .description {
   font-size: 0.95rem;
   color: hsl(0, 0%, 30%);
@@ -70,18 +78,16 @@ body {
   line-height: 1.5;
 }
 
-/* Author Section */
+
 .author {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
-
 .author-img {
   width: 35px;
-  border-radius: 50%;
 }
-
 .author-name {
   font-weight: 700;
   font-size: 0.95rem;
